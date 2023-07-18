@@ -1,1 +1,24 @@
 # Treatment_History
+- 'FINTECH ACADEMY 인슈어테크 서비스 개발 과정 오픈 API 활용 보험 서비스 개발 실습' 했던 내용을 기반으로 만든 개인 프로젝트
+- 교육 일시 : 2023.07.10 ~ 2023.07.14
+
+# 개인프로젝트 : 1년동안 병원 및 약국 이용 내역 & 1년동안 복용한 약
+- 오픈 API 활용을 실습하기 위한 프로젝트
+- 첫 번째 오픈 API : [간편인증] mydatahub의 [건강보험_진료받은내용 조회(간편인증)](https://dataapi.co.kr/dLab/mdh_api.do)
+- (아직 구현 못함 - 추후 구현 예정) 두 번째 오픈 API : [공인인증서] tilkoblet의 [내가 먹는 약](https://tilko.net/Help/Api/POST-api-apiVersion-Hira-HIRAA050300000100)
+- Main Page Capture Image<br>
+<img width="624" alt="treatment_mainPage" src="https://github.com/kkh0331/Treatment_History/assets/99806443/1320ba59-81eb-49d0-81ac-5f2d1d0f6dda"><br>
+[시연영상을 보실려면 여기를 클릭해주세요](https://youtu.be/juy_RttUYuY)
+
+# Functions
+- 오픈 API 활용
+- 암호화 알고리즘
+
+# 프로젝트 Architecture
+Front-end<br>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/><br>
+Back-end<br>
+<img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=Express&logoColor=white"/><br>
+Cloud & Hosting : Local host로 작업<br>
+Tools<br>
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/><br>
