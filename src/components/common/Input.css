@@ -1,0 +1,33 @@
+.InputElement{
+    font-size: 20px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.InputButtonElement{
+    background-color: #ff971e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.InputBackgroundDib{
+    color: #000000;
+    font-size: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    width:430px;
+    margin : auto;
+    text-align:left;
+}
+
+.ResultTDLeftStyle{
+    color: #ff971e;
+    font-weight: bold;
+}
+
+.ResultSpanStyle{
+     margin-left: 10px;
+}

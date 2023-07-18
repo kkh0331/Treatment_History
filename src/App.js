@@ -1,22 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import WebPageDescription from './components/WebPageDescription';
+import AppHeader from './components/common/AppHeader';
+import TreatmentInput from './components/TreatmentInput';
+import DrugInput from './components/DrugInput';
+import TreatmentCertification from './components/TreatmentCertification';
+import TreatmentResult from './components/TreatmentResult';
 
 function App() {
   return (
     <div className="App">
+      <AppHeader title={"Medical Treatment"}></AppHeader>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<WebPageDescription/>}></Route>
+            <Route path="/treatment/input" element={<TreatmentInput/>}></Route>
+            <Route path="/treatment/certification" element={<TreatmentCertification/>}></Route>
+            <Route path="/treatment/result" element={<TreatmentResult/>}></Route>
+            <Route path="/drug/input" element={<DrugInput/>}></Route>
+          </Routes>
+        </BrowserRouter>
       </header>
     </div>
   );
