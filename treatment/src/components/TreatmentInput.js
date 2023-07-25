@@ -8,7 +8,9 @@ const TreatmentInput = () => {
   const [loginOption, setLoginOption] = useState("");
   const [jumin, setJumin] = useState("");
   const [userName, setUserName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumberFirst, setPhoneNumberFirst] = useState("");
+  const [phoneNumberSecond, setPhoneNumberSecond] = useState("");
+  const [phoneNumberThird, setPhoneNumberThird] = useState("");
   const [telecomGubun, setTelecomGubun] = useState("");
 
   const handleLoginOptionChange = (e) => {
@@ -23,8 +25,16 @@ const TreatmentInput = () => {
     setUserName(e.target.value);
   }
 
-  const handlePhoneNumberChange = (e) => {
-    setPhoneNumber(e.target.value);
+  const handlePhoneNumberFirstChange = (e) => {
+    setPhoneNumberFirst(e.target.value);
+  }
+
+  const handlePhoneNumberSecondChange = (e) => {
+    setPhoneNumberSecond(e.target.value);
+  }
+
+  const handlePhoneNumberThirdChange = (e) => {
+    setPhoneNumberThird(e.target.value);
   }
 
   const handleTelecomGubunChange = (e) => {
@@ -32,14 +42,14 @@ const TreatmentInput = () => {
   }
 
   const handleClick = () => {
-    if(loginOption==="" || jumin==="" || userName==="" || phoneNumber==="" || telecomGubun===""){
+    if(loginOption==="" || jumin==="" || userName==="" || phoneNumberFirst==="" || phoneNumberSecond==="" || phoneNumberThird==="" || telecomGubun===""){
       return alert("모든 요소를 선택해주세요");
     }
     axios.post('http://localhost:8000/treatment', {
         loginOption:loginOption,
         jumin:jumin,
         userName:userName,
-        phoneNumber:phoneNumber,
+        phoneNumber:phoneNumberFirst+phoneNumberSecond+phoneNumberThird,
         telecomGubun:telecomGubun
     })
     .then(response => {
@@ -57,9 +67,10 @@ const TreatmentInput = () => {
         <table>
           <tr>
             <td>
-              Login Option
+              로그인옵션
             </td>
             <td>
+              <span className='ResultSpanStyle'/>
               <select value={loginOption} className="InputElement" onChange={handleLoginOptionChange}>
                 <option value={""}>선택하세요</option>
                 <option value={"0"}>카카오톡</option>
@@ -75,33 +86,41 @@ const TreatmentInput = () => {
           </tr>
           <tr>
             <td>
-              Jumin
+              생 년 월 일
             </td>
             <td>
+              <span className='ResultSpanStyle'/>
               <input type='number' className="InputElement" placeholder='ex) yyyymmdd' onChange={handleJuminChange}></input>
             </td>
           </tr>
           <tr>
             <td>
-              User Name
+              사용자이름
             </td>
             <td>
+              <span className='ResultSpanStyle'/>
               <input type='text' className="InputElement" placeholder='ex) 홍길동' onChange={handleUserNameChange}></input>
             </td>
           </tr>
           <tr>
             <td>
-              Phone Number
+              휴대폰번호
             </td>
             <td>
-              <input type='number' className="InputElement" placeholder='ex) 01012341234' onChange={handlePhoneNumberChange}></input>
+              <span className='ResultSpanStyle'/>
+              <input type='number' maxLength={'3'} className="InputElement2" placeholder='010' onChange={handlePhoneNumberFirstChange}></input>
+              -
+              <input type='password' maxLength={'4'} className="InputElement2" placeholder='1234' onChange={handlePhoneNumberSecondChange}></input>
+              -
+              <input type='password' maxLength={'4'} className="InputElement2" placeholder='1234' onChange={handlePhoneNumberThirdChange}></input>
             </td>
           </tr>
           <tr>
             <td>
-            Telecom Gubun
+              통 신 사
             </td>
             <td>
+              <span className='ResultSpanStyle'/>
               <select value={telecomGubun} className="InputElement" onChange={handleTelecomGubunChange}>
                 <option value={""}>선택하세요</option>
                 <option value={"1"}>SKT</option>

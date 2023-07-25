@@ -6,6 +6,7 @@ import TreatmentInput from './components/TreatmentInput';
 import DrugInput from './components/DrugInput';
 import TreatmentCertification from './components/TreatmentCertification';
 import TreatmentResult from './components/TreatmentResult';
+import DrugResult from './components/DrugResult';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/treatment/certification" element={<TreatmentCertification/>}></Route>
             <Route path="/treatment/result" element={<TreatmentResult/>}></Route>
             <Route path="/drug/input" element={<DrugInput/>}></Route>
+            <Route path="/drug/result" element={<DrugResult/>}></Route>
           </Routes>
         </BrowserRouter>
       </header>

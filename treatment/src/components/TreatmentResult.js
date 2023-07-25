@@ -30,50 +30,48 @@ const TreatmentResult = () => {
             <AppTitle title={"Result for Treatment Hist"}></AppTitle>
             {jinList.map(({JINMEDICALNM,JINDATE,JINTYPE,JINDSAMT,JINGDAMT})=>{
                 return(
-                    <div className='InputBackgroundDib' style={{width:"600px"}}>
-                        <table>
-                            <tr>
-                                <td className='ResultTDLeftStyle'>
-                                    진료 장소
-                                </td>
-                                <td>
-                                    <span className='ResultSpanStyle'>{JINMEDICALNM}</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='ResultTDLeftStyle'>
-                                    진료 날짜
-                                </td>
-                                <td>
-                                    <span className='ResultSpanStyle'>{JINDATE}</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='ResultTDLeftStyle'>
-                                    진료 형태
-                                </td>
-                                <td>
-                                    <span className='ResultSpanStyle'>{JINTYPE}</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='ResultTDLeftStyle'>
-                                    본인 부담금
-                                </td>
-                                <td>
-                                    <span className='ResultSpanStyle'>{JINDSAMT}</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className='ResultTDLeftStyle'>
-                                    공단 부담금
-                                </td>
-                                <td>
-                                    <span className='ResultSpanStyle'>{JINGDAMT}</span>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table className='tableStyle'>
+                        <tr>
+                            <th scope='row'>
+                                진료 장소
+                            </th>
+                            <td>
+                                <span className='ResultSpanStyle'>{JINMEDICALNM}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope='row'>
+                                진료 날짜
+                            </th>
+                            <td>
+                                <span className='ResultSpanStyle'>{JINDATE}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope='row'>
+                                진료 형태
+                            </th>
+                            <td>
+                                <span className='ResultSpanStyle'>{JINTYPE}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope='row'>
+                                본인 부담금
+                            </th>
+                            <td>
+                                <span className='ResultSpanStyle'>{JINDSAMT}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope='row'>
+                                공단 부담금
+                            </th>
+                            <td>
+                                <span className='ResultSpanStyle'>{JINGDAMT}</span>
+                            </td>
+                        </tr>
+                    </table>
                 )
             })}
             <div style={{textAlign:"center"}}>

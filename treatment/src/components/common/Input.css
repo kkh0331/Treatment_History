@@ -1,11 +1,31 @@
 .InputElement{
     font-size: 20px;
-    width: 200px;
+    width: 220px;
     margin-bottom: 20px;
 }
 
+.InputElement2{
+    font-size: 20px;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.DrugInputElement{
+    font-size: 20px;
+    width: 290px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.DrugInputElement2{
+    font-size: 20px;
+    width: 125px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .InputButtonElement{
-    background-color: #ff971e;
+    background-color: #642a02;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -23,11 +43,33 @@
     text-align:left;
 }
 
-.ResultTDLeftStyle{
-    color: #ff971e;
-    font-weight: bold;
-}
-
 .ResultSpanStyle{
      margin-left: 10px;
+}
+
+table.tableStyle {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+table.tableStyle th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background-color: #978b7d;
+    color: white;
+}
+table.tableStyle td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
 }

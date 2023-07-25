@@ -13,4 +13,7 @@ app.listen(port);
 const treatment = require('./treatment');
 app.use('/treatment' ,treatment);
 
+const drug = require('./drug');
+app.use('/drug', drug);
+
 console.log(`server running at http ${port}`);
